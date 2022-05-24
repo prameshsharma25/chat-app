@@ -6,9 +6,9 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = ""
 socketio = SocketIO(app)
 
-@app.route("/")
-def index():
-    return render_template("index.html")
+@app.route("/login")
+def login():
+    return render_template("login.html")
 
 @socketio.on("message")
 def handle_message(msg):
